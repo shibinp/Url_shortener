@@ -1,0 +1,12 @@
+<h1>Analytics</h1>
+<% @urls.each do |url| %>
+  <p>
+    <div id="container1"> <%= url.original %> </div>
+    <div id="container2"><%= link_to "http://"+url.random_id, url_path(:id => url.random_id) %> </div>
+    <hr />
+
+  </p>
+<% end %>
+
+
+<%= link_to "Shorten Another  URL", new_url_path %>
